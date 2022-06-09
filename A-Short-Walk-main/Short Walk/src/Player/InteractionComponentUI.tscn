@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Player/InteractionComponentUI.gd" type="Script" id=1]
+[ext_resource path="res://SW textures/UI/Button.png" type="Texture" id=3]
+
+[node name="InteractionComponentUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -233.0
+margin_bottom = -120.0
+script = ExtResource( 1 )
+interaction_texture_nodepath = NodePath("HBoxContainer/TextureRect")
+interaction_text_nodepath = NodePath("HBoxContainer/RichTextLabel")
+interaction_default_texture = ExtResource( 3 )
+interaction_default_text = "Interact!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+margin_right = 7.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer"]
+visible = false
+margin_left = 11.0
+margin_right = 40.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Interact"
